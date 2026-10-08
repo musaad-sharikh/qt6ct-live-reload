@@ -1,0 +1,57 @@
+# Maintainer: Musaad Muhammad
+#
+# Derived from the Arch Linux packaging of qt6ct (0BSD, Copyright Arch Linux Contributors):
+# https://gitlab.archlinux.org/archlinux/packaging/packages/qt6ct at 43db8df8cb20
+# That recipe's maintainers: Antonio Rojas, Martchus.
+#
+# Adds two patches on top of qt6ct 0.11:
+#   1. the KDE theming patch by Ilya Fedin, fetched from the AUR package qt6ct-kde at a pinned
+#      commit and not redistributed here;
+#   2. qt6ct-live-reload.patch from this repository.
+
+pkgname=qt6ct-kde
+pkgver=0.11
+pkgrel=8.1 # sorts above the AUR's 0.11-8, which it replaces, and below its next release
+pkgdesc='Qt 6 Configuration Utility with KDE theming and live color scheme reload'
+arch=(x86_64)
+url='https://www.opencode.net/trialuser/qt6ct'
+license=(BSD-2-Clause)
+depends=(glibc
+         kcolorscheme
+         kconfig
+         kiconthemes
+         libgcc
+         libstdc++
+         qqc2-desktop-style
+         qt6-base
+         qt6-declarative
+         qt6-svg)
+makedepends=(cmake
+             git
+             qt6-tools)
+provides=(qt6ct)
+conflicts=(qt6ct)
+_aurcommit=8c1003e13b7e7545e717273e0716f095f195bd13 # qt6ct-kde 0.11-8
+source=(git+https://www.opencode.net/trialuser/qt6ct#tag=$pkgver
+        "qt6ct-kde-theming.patch::https://aur.archlinux.org/cgit/aur.git/plain/qt6ct-shenanigans.patch?h=qt6ct-kde&id=$_aurcommit"
+        qt6ct-live-reload.patch)
+sha256sums=('76bfc26838b8ec7dd049da54bd812d8c526986024845a30d1e546e43555e52bf'
+            'baab2b714ad490de3a12edd5d4ec0f6223eded034d66a694989e746b86d1f420'
+            '2389ab7b745d69e4eeed23940d4b5505a1aeb5fb45ee8d722fc5159346ee38ea')
+
+prepare() {
+  cd qt6ct
+  patch -p1 < ../qt6ct-kde-theming.patch
+  patch -p1 < ../qt6ct-live-reload.patch
+}
+
+build() {
+  cmake -B build -S qt6ct \
+    -DCMAKE_INSTALL_PREFIX=/usr
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+  install -Dm644 qt6ct/COPYING "$pkgdir"/usr/share/licenses/$pkgname/LICENSE
+}
