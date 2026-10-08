@@ -1,5 +1,6 @@
 #!/bin/bash
 # usage: dol.sh <scratch> <name> <stock|patched>   -- real /usr/bin/dolphin, offscreen, private bus, scratch HOME
+. "$(dirname "$0")/isolate.sh"
 S="$1"; N="$2"; BUILD="$3"; Q="$S/qtct"; R="$S/probe/dol/$N"; rm -rf "$R"; H="$R/home"
 mkdir -p "$H/.config/qt6ct" "$H/.local/share/color-schemes" "$H/files/sub" "$R/out"; touch "$H/files/a.txt" "$H/files/b.txt"; LOG="$R/log.txt"
 cat > "$R/t.toml" <<T
@@ -20,7 +21,7 @@ X=(QT_QPA_PLATFORM=offscreen QT_QPA_PLATFORMTHEME=qt6ct QT_FORCE_STDERR_LOGGING=
 "${E[@]}" "${X[@]}" /usr/bin/dolphin --new-window "$H/files" >> "$LOG" 2>&1 &
 PID=$!
 ev(){ echo "EVT $*" >> "$LOG"; }
-sleep 6; ev "dolphin $(/usr/bin/dolphin --version) pid alive: $(kill -0 $PID 2>/dev/null && echo yes || echo NO); theme plugin: $(grep -oE '/[^ ]*platformthemes/libqt6ct.so' /proc/$PID/maps | sort -u)"
+sleep 6; ev "dolphin $("${E[@]}" QT_QPA_PLATFORM=offscreen /usr/bin/dolphin --version) pid alive: $(kill -0 $PID 2>/dev/null && echo yes || echo NO); theme plugin: $(grep -oE '/[^ ]*platformthemes/libqt6ct.so' /proc/$PID/maps | sort -u)"
 for m in ${SEQ:-light dark regen dark light}; do ev "switch -> $m"; render $m; sleep 6; done
 ev "alive at end: $(kill -0 $PID 2>/dev/null && echo yes || echo NO)"; kill $PID 2>/dev/null; sleep 1
 echo "##### $N  real dolphin, $BUILD plugin"; grep -E '^(PAL|EVT)' "$LOG" | sed "s#$S/##" | cut -c1-150; ls "$R/out"

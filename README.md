@@ -148,6 +148,14 @@ window's focus state: `[Colors:Header]` when active, `[Colors:Header][Inactive]`
 The harnesses in `probes/` are the ones that produced the results. They are not a portable test
 suite: each takes a scratch root as its first argument and expects the layout the runs used.
 
+`scen.sh`, `dol.sh` and `extra2.sh` isolate themselves through `probes/isolate.sh`: each runs on a
+session bus of its own that can activate no service, with an `XDG_RUNTIME_DIR` of its own and no
+display, and removes both when it ends. They are started directly, not under `dbus-run-session`.
+The private runtime directory is what keeps a run away from the session it is started from: a
+second `xdg-document-portal` that shares the session's `XDG_RUNTIME_DIR` unmounts
+`$XDG_RUNTIME_DIR/doc`, and no Flatpak application starts after that until the session's own
+`xdg-document-portal.service` is restarted.
+
 Requirements:
 
 - Qt 6 and KDE Frameworks 6 with headers: Qt Core/Gui/Widgets, KColorScheme, KConfig,
@@ -175,7 +183,7 @@ g++ -std=c++20 -fPIC -O1 kp.cpp -o kp $INC \
     -lQt6Core -lQt6Gui -lQt6Widgets -lKF6ColorScheme -lKF6ConfigCore -lKF6ConfigGui -lKF6ConfigWidgets
 g++ -std=c++20 -fPIC -shared -O1 inject.cpp -o inject.so $INC \
     -lQt6Core -lQt6Gui -lQt6Widgets -lKF6ColorScheme
-dbus-run-session -- ./extra2.sh <scratch> Y4 kpk stress
+./extra2.sh <scratch> Y4 kpk stress
 ```
 
 `kp.cpp` is a QApplication that calls `KStyleManager::initStyle()` and, with `--kcsm`,

@@ -1,5 +1,6 @@
 #!/bin/bash
 # usage: scen.sh <probe-root> <name> <kde|native> <poke|nopoke> [--kcsm]
+. "$(dirname "$0")/isolate.sh"
 S="$1"; N="$2"; FMT="$3"; POKE="$4"; KCSM="$5"; BUILD="$6"; Q="$S/../qtct"
 R="$S/kp/$N"; rm -rf "$R"; mkdir -p "$R/home/.config/qt6ct/colors" "$R/home/.local/share/color-schemes"
 H="$R/home"; LOG="$R/log.txt"

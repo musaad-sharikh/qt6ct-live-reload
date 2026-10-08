@@ -1,5 +1,6 @@
 #!/bin/bash
 # usage: extra2.sh <scratch> <name> <probe: kpk|kp|qml> <case> [stock]
+. "$(dirname "$0")/isolate.sh"
 S="$1"; N="$2"; PR="$3"; CASE="$4"; BUILD="${5:-patched}"; Q="$S/qtct"; K="$S/probe/kp"; D="$S/probe/dyn/src"
 R="$K/$N"; rm -rf "$R"; H="$R/home"; mkdir -p "$H/.config/qt6ct/colors" "$H/.local/share/color-schemes"; LOG="$R/log.txt"
 F="$H/.local/share/color-schemes/noctalia.colors"; G="$H/.local/share/color-schemes/other.colors"; cp "$D/dark.colors" "$F"; cp "$D/dark.colors" "$G"
