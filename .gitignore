@@ -1,0 +1,21 @@
+# local only: unmasked logs, package files, the AUR recipe and patch
+.local/
+
+# makepkg working trees and output; pkg/qt6ct-kde keeps the PKGBUILD and qt6ct-live-reload.patch
+pkg/*/src/
+pkg/*/pkg/
+pkg/qt6ct-kde/qt6ct/
+pkg/qt6ct-kde/qt6ct-kde-theming.patch
+pkg/**/*.log
+*.pkg.tar.zst
+*.pkg.tar.zst.sig
+
+# screenshots stay local
+*.png
+results/screenshots/
+
+# probe build products
+probes/kp
+*.so
+*.o
+build*/
