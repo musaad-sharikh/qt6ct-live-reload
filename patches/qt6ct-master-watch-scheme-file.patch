@@ -1,0 +1,124 @@
+diff --git a/src/qt6ct-qtplugin/qt6ctplatformtheme.cpp b/src/qt6ct-qtplugin/qt6ctplatformtheme.cpp
+index 569b13f..3f92c3e 100644
+--- a/src/qt6ct-qtplugin/qt6ctplatformtheme.cpp
++++ b/src/qt6ct-qtplugin/qt6ctplatformtheme.cpp
+@@ -214,20 +214,76 @@ void Qt6CTPlatformTheme::applySettings()
+ #ifdef QT_WIDGETS_LIB
+ void Qt6CTPlatformTheme::createFSWatcher()
+ {
+-    QFileSystemWatcher *watcher = new QFileSystemWatcher(this);
+-    watcher->addPath(Qt6CT::configPath());
++    m_watcher = new QFileSystemWatcher(this);
++    m_watcher->addPath(Qt6CT::configPath());
++    watchSchemeFile();
+ 
+     QTimer *timer = new QTimer(this);
+     timer->setSingleShot(true);
+     timer->setInterval(3000);
+-    connect(watcher, &QFileSystemWatcher::directoryChanged, timer, qOverload<>(&QTimer::start));
++    connect(m_watcher, &QFileSystemWatcher::fileChanged, timer, qOverload<>(&QTimer::start));
++    connect(m_watcher, &QFileSystemWatcher::directoryChanged, timer, [this, timer](const QString &path) {
++        //the directory of the color scheme file is watched only to notice the file coming back
++        if(path == Qt6CT::configPath() || watchSchemeFile())
++            timer->start();
++    });
+     connect(timer, &QTimer::timeout, this, &Qt6CTPlatformTheme::updateSettings);
+ }
+ 
++//the directory of the file, or the nearest one above it that exists
++static QString nearestExistingDir(const QString &filePath)
++{
++    QString path = QFileInfo(filePath).absolutePath();
++    while(!QFileInfo::exists(path) && path != QFileInfo(path).absolutePath())
++        path = QFileInfo(path).absolutePath();
++    return path;
++}
++
++//The color scheme file can change while qt6ct.conf stays untouched. A file that is replaced or
++//removed drops out of the watcher, so the nearest existing directory is watched as well to add
++//it back. Returns true if the file has just been added.
++bool Qt6CTPlatformTheme::watchSchemeFile()
++{
++    if(!m_watcher)
++        return false;
++
++    //A directory can appear or vanish while its watch is being set up, so look again after adding
++    //one. The rounds are limited: whatever is watched at the end reports the next change anyway.
++    for(int round = 0; round < 5; ++round)
++    {
++        const QString dirPath = m_schemePath.isEmpty() ? QString() : nearestExistingDir(m_schemePath);
++        QStringList stale;
++        const QStringList files = m_watcher->files();
++        for(const QString &path : files)
++        {
++            if(path != m_schemePath)
++                stale << path;
++        }
++        const QStringList dirs = m_watcher->directories();
++        for(const QString &path : dirs)
++        {
++            if(path != dirPath && path != Qt6CT::configPath())
++                stale << path;
++        }
++        if(!stale.isEmpty())
++            m_watcher->removePaths(stale);
++
++        if(m_schemePath.isEmpty())
++            return false;
++        if(dirs.contains(dirPath) || (m_watcher->addPath(dirPath) && nearestExistingDir(m_schemePath) == dirPath))
++            break;
++    }
++
++    if(m_watcher->files().contains(m_schemePath) || !QFileInfo::exists(m_schemePath))
++        return false;
++    return m_watcher->addPath(m_schemePath);
++}
++
+ void Qt6CTPlatformTheme::updateSettings()
+ {
+     qCDebug(lqt6ct) << "updating settings..";
+     readSettings();
++    watchSchemeFile();
+     applySettings();
+ }
+ #endif
+@@ -240,10 +296,12 @@ void Qt6CTPlatformTheme::readSettings()
+     m_style = settings.value("style"_L1, u"Fusion"_s).toString();
+     m_palette = *QGenericUnixTheme::palette(SystemPalette);
+     QString schemePath = settings.value("color_scheme_path"_L1).toString();
++    m_schemePath.clear();
+     if(!schemePath.isEmpty() && settings.value("custom_palette"_L1, false).toBool())
+     {
+         schemePath = Qt6CT::resolvePath(schemePath); //replace environment variables
+         m_palette = Qt6CT::loadColorScheme(schemePath, m_palette);
++        m_schemePath = schemePath;
+     }
+     m_iconTheme = settings.value("icon_theme"_L1).toString();
+     //load dialogs
+diff --git a/src/qt6ct-qtplugin/qt6ctplatformtheme.h b/src/qt6ct-qtplugin/qt6ctplatformtheme.h
+index b2a7bcf..d3eb80b 100644
+--- a/src/qt6ct-qtplugin/qt6ctplatformtheme.h
++++ b/src/qt6ct-qtplugin/qt6ctplatformtheme.h
+@@ -45,6 +45,8 @@
+ 
+ Q_DECLARE_LOGGING_CATEGORY(lqt6ct)
+ 
++class QFileSystemWatcher;
++
+ class Qt6CTPlatformTheme : public QObject, public QGenericUnixTheme
+ {
+     Q_OBJECT
+@@ -81,10 +83,13 @@ private:
+     void readSettings();
+ #ifdef QT_WIDGETS_LIB
+     bool hasWidgets();
++    bool watchSchemeFile();
+ #endif
+     QString loadStyleSheets(const QStringList &paths);
+     QString m_style, m_iconTheme, m_userStyleSheet, m_prevStyleSheet;
+     QPalette m_palette;
++    QFileSystemWatcher *m_watcher = nullptr;
++    QString m_schemePath;
+     QFont m_generalFont, m_fixedFont;
+     int m_doubleClickInterval;
+     int m_cursorFlashTime;

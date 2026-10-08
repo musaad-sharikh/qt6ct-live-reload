@@ -1,0 +1,21 @@
+diff --git a/src/qt6ct-common/qt6ct.cpp b/src/qt6ct-common/qt6ct.cpp
+index 896895d..aafac04 100644
+--- a/src/qt6ct-common/qt6ct.cpp
++++ b/src/qt6ct-common/qt6ct.cpp
+@@ -164,7 +164,15 @@ QPalette Qt6CT::loadColorScheme(const QString &filePath, const QPalette &fallbac
+ {
+ #if defined KF_CONFIGCORE_LIB && defined KF_COLORSCHEME_LIB
+     if(isKColorScheme(filePath))
+-        return KColorScheme::createApplicationPalette(KSharedConfig::openConfig(filePath));
++    {
++        //KSharedConfig instances are shared and cached, so a file that got new content has to be
++        //parsed again. This instance is also the one KColorScheme reads.
++        KSharedConfigPtr config = KSharedConfig::openConfig(filePath);
++        config->reparseConfiguration();
++        //Breeze keeps its own instance of the file for the tools area, opened with NoGlobals
++        KSharedConfig::openConfig(filePath, KConfig::NoGlobals)->reparseConfiguration();
++        return KColorScheme::createApplicationPalette(config);
++    }
+ #endif
+ 
+     QPalette customPalette;
