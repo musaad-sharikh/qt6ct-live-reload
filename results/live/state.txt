@@ -1,0 +1,36 @@
+recorded at 21:51:41
+mode_resolved=dark
+wallpaper_default=~/Github/Musaad-Sharikh/wallpapers/dark/goldfish.jpg
+wallpaper_eDP-1=~/Github/Musaad-Sharikh/wallpapers/dark/goldfish.jpg
+color_scheme=custom noctalia-local
+49:custom_palette = "noctalia-local"
+50:mode = "auto"
+51:source = "custom"
+54:directory = "~/Github/Musaad-Sharikh/wallpapers"
+55:directory_dark = "~/Github/Musaad-Sharikh/wallpapers/dark"
+56:directory_light = "~/Github/Musaad-Sharikh/wallpapers/light"
+59:    path = "~/Github/Musaad-Sharikh/wallpapers/dark/goldfish.jpg"
+62:    path = "~/Github/Musaad-Sharikh/wallpapers/dark/goldfish.jpg"
+65:    path = "~/Github/Musaad-Sharikh/wallpapers/dark/goldfish.jpg"
+68:    path = "~/Github/Musaad-Sharikh/wallpapers/dark/gas-station.jpg"
+71:    custom_palette = "noctalia-local"
+73:    path = "~/Github/Musaad-Sharikh/wallpapers/dark/goldfish.jpg"
+74:    theme_mode = "auto"
+77:    custom_palette = "noctalia-local"
+79:    path = "~/Github/Musaad-Sharikh/wallpapers/dark/a_black_sky_with_white_dots.jpg"
+80:    theme_mode = "auto"
+dark surface #141f29 primary #67a9e4 onSurface #f2f2f3
+light surface #dde6ee primary #13426c onSurface #181a1b
+noctalia.colors [Colors:Header] BackgroundNormal=27,42,55
+noctalia.colors [Colors:Selection] BackgroundNormal=103,169,228
+noctalia.colors [Colors:View] BackgroundNormal=20,31,41
+noctalia.colors [Colors:Window] BackgroundNormal=27,42,55
+2026-10-08 21:08:32 2347 ~/.local/state/noctalia/settings.toml
+2026-10-08 19:18:47 3475 ~/.local/share/color-schemes/noctalia.colors
+2026-10-08 19:18:47 3870 ~/.config/kdeglobals
+2026-10-08 19:18:47 2362 ~/.config/noctalia/palettes/noctalia-local.json
+2026-09-15 04:08:42 894 ~/.config/qt6ct/qt6ct.conf
+490f4b4f7c83c17c  kdeglobals
+0ae1010dde50ccca  noctalia.colors
+d2a2bc9ca7247b72  noctalia-local.json
+b083242ab25de33c  settings.toml

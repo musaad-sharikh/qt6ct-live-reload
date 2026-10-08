@@ -1,0 +1,8 @@
+##### Z1  probe=kpk  case=churn  build=patched
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT watches at start: 3; plugin: <scratch>/…
+EVT 40 unrelated files created and removed in the scheme directory (must NOT reload)
+EVT    reloads so far: 0; watches: 3
+EVT light: overwritten in place (must reload once)
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT probe alive: yes; watches at end: 3; reloads: 1

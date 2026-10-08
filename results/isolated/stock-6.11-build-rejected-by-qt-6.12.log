@@ -1,0 +1,497 @@
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/plugins/platforms" ...
+qt.core.plugin.factoryloader: looking at "libqeglfs.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqeglfs.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "eglfs"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QEglFSIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("eglfs")
+qt.core.plugin.factoryloader: looking at "libqxcb.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqxcb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "xcb"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QXcbIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("xcb")
+qt.core.plugin.factoryloader: looking at "libqlinuxfb.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqlinuxfb.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "linuxfb"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QLinuxFbIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("linuxfb")
+qt.core.plugin.factoryloader: looking at "libqoffscreen.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqoffscreen.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "offscreen"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QOffscreenIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("offscreen")
+qt.core.plugin.factoryloader: looking at "libqminimal.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqminimal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimal"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QMinimalIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("minimal")
+qt.core.plugin.factoryloader: looking at "libqvkkhrdisplay.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqvkkhrdisplay.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vkkhrdisplay"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QVkKhrDisplayIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("vkkhrdisplay")
+qt.core.plugin.factoryloader: looking at "libqminimalegl.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqminimalegl.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "minimalegl"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QMinimalEglIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("minimalegl")
+qt.core.plugin.factoryloader: looking at "libqwayland.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqwayland.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "wayland",
+            "wayland-egl",
+            "wayland-brcm"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QWaylandIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("wayland", "wayland-egl", "wayland-brcm")
+qt.core.plugin.factoryloader: looking at "libqvnc.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platforms/libqvnc.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformIntegrationFactoryInterface.5.3",
+    "MetaData": {
+        "Keys": [
+            "vnc"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QVncIntegrationPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("vnc")
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/bin/platforms" ...
+qt.core.library: "/usr/lib/qt6/plugins/platforms/libqoffscreen.so" loaded library
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/plugins/platformthemes" ...
+qt.core.plugin.factoryloader: looking at "libqt6ct.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platformthemes/libqt6ct.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformThemeFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "qt6ct",
+            "qt5ct"
+        ]
+    },
+    "archlevel": 3,
+    "className": "Qt6CTPlatformThemePlugin",
+    "debug": false,
+    "version": 396032
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("qt6ct", "qt5ct")
+qt.core.plugin.factoryloader: Ignoring QPA plugin due to mismatching Qt versions 396288 396032
+qt.core.plugin.factoryloader: looking at "libqxdgdesktopportal.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platformthemes/libqxdgdesktopportal.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformThemeFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "xdgdesktopportal",
+            "flatpak",
+            "snap"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QXdgDesktopPortalThemePlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("xdgdesktopportal", "flatpak", "snap")
+qt.core.plugin.factoryloader: looking at "libqgtk3.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/platformthemes/libqgtk3.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QPA.QPlatformThemeFactoryInterface.5.1",
+    "MetaData": {
+        "Keys": [
+            "gtk3"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QGtk3ThemePlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("gtk3")
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/bin/platformthemes" ...
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/plugins/styles" ...
+qt.core.plugin.factoryloader: looking at "libqt6ct-style.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/styles/libqt6ct-style.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QStyleFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "qt6ct-style",
+            "qt5ct-style"
+        ]
+    },
+    "archlevel": 3,
+    "className": "Qt6CTStylePlugin",
+    "debug": false,
+    "version": 396032
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("qt6ct-style", "qt5ct-style")
+qt.core.plugin.factoryloader: looking at "breeze6.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/styles/breeze6.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QStyleFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "Breeze"
+        ]
+    },
+    "archlevel": 3,
+    "className": "StylePlugin",
+    "debug": false,
+    "version": 396032
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("breeze")
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/bin/styles" ...
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/plugins/iconengines" ...
+qt.core.plugin.factoryloader: looking at "libqsvgicon.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/iconengines/libqsvgicon.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QIconEngineFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "svg",
+            "svgz",
+            "svg.gz"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QSvgIconPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("svg", "svgz", "svg.gz")
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/bin/iconengines" ...
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/plugins/imageformats" ...
+qt.core.plugin.factoryloader: looking at "libqtiff.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqtiff.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "tiff",
+            "tif"
+        ],
+        "MimeTypes": [
+            "image/tiff",
+            "image/tiff"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QTiffPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("tiff", "tif")
+qt.core.plugin.factoryloader: looking at "libqicns.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqicns.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "icns"
+        ],
+        "MimeTypes": [
+            "image/x-icns"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QICNSPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("icns")
+qt.core.plugin.factoryloader: looking at "libqwebp.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqwebp.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "webp"
+        ],
+        "MimeTypes": [
+            "image/webp"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QWebpPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("webp")
+qt.core.plugin.factoryloader: looking at "libqwbmp.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqwbmp.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "wbmp"
+        ],
+        "MimeTypes": [
+            "image/vnd.wap.wbmp"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QWbmpPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("wbmp")
+qt.core.plugin.factoryloader: looking at "libqgif.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqgif.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "gif"
+        ],
+        "MimeTypes": [
+            "image/gif"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QGifPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("gif")
+qt.core.plugin.factoryloader: looking at "libqsvg.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqsvg.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "svg",
+            "svgz"
+        ],
+        "MimeTypes": [
+            "image/svg+xml",
+            "image/svg+xml-compressed"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QSvgPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("svg", "svgz")
+qt.core.plugin.factoryloader: looking at "libqico.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqico.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "ico",
+            "cur"
+        ],
+        "MimeTypes": [
+            "image/vnd.microsoft.icon",
+            "image/vnd.microsoft.icon"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QICOPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("ico", "cur")
+qt.core.plugin.factoryloader: looking at "libqjpeg.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqjpeg.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "jpg",
+            "jpeg",
+            "jfif"
+        ],
+        "MimeTypes": [
+            "image/jpeg",
+            "image/jpeg",
+            "image/jpeg"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QJpegPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("jpg", "jpeg", "jfif")
+qt.core.plugin.factoryloader: looking at "libqtga.so"
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/plugins/imageformats/libqtga.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QImageIOHandlerFactoryInterface",
+    "MetaData": {
+        "Keys": [
+            "tga"
+        ],
+        "MimeTypes": [
+            "image/x-tga"
+        ]
+    },
+    "archlevel": 3,
+    "className": "QTgaPlugin",
+    "debug": false,
+    "version": 396288
+}
+
+
+qt.core.plugin.factoryloader: Got keys from plugin meta data QList("tga")
+qt.core.plugin.factoryloader: checking directory path "/usr/lib/qt6/bin/imageformats" ...
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/qml/QtQuick/libqtquick2plugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlExtensionInterface/1.0",
+    "archlevel": 3,
+    "className": "QtQuick2Plugin",
+    "debug": false,
+    "uri": [
+        "QtQuick"
+    ],
+    "version": 396288
+}
+
+
+qt.core.library: "/usr/lib/qt6/qml/QtQuick/libqtquick2plugin.so" loaded library
+qml: PALETTE window=#efefef base=#ffffff text=#000000 style=0
+qt.core.plugin.loader: Found metadata in lib /usr/lib/qt6/qml/QtQuick/Window/libquickwindowplugin.so, metadata=
+{
+    "IID": "org.qt-project.Qt.QQmlEngineExtensionInterface",
+    "archlevel": 3,
+    "className": "QtQuick_WindowPlugin",
+    "debug": false,
+    "uri": [
+        "QtQuick.Window"
+    ],
+    "version": 396288
+}
+
+
+qt.core.library: "/usr/lib/qt6/qml/QtQuick/Window/libquickwindowplugin.so" loaded library
+qt.core.library: "/usr/lib/qt6/plugins/platforms/libqoffscreen.so" unloaded library 
+"/usr/lib/qt6/qml/QtQuick/Window/libquickwindowplugin.so" unloaded library 
+"/usr/lib/qt6/qml/QtQuick/libqtquick2plugin.so" unloaded library 

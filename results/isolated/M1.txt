@@ -1,0 +1,17 @@
+##### M1  probe=qml  case=missingfile  build=patched
+PAL window=#efefef base=#ffffff text=#000000
+EVT watches at start: 3; plugin: plug-up/platformthemes/libqt6ct.so
+EVT color_scheme_path -> colors/later.conf (missingfile)
+EVT    reloads=1 watches=2 warnings=0
+EVT file created (dark)
+PAL window=#243022 base=#1b2419 text=#f2f3f2
+EVT    reloads=2 watches=3 warnings=0
+EVT overwritten in place (light)
+PAL window=#d6e0d3 base=#e3eae1 text=#191b18
+EVT    reloads=3 watches=3 warnings=0
+EVT deleted
+PAL window=#efefef base=#ffffff text=#000000
+EVT    reloads=4 watches=2 warnings=0
+EVT created again (dark)
+PAL window=#243022 base=#1b2419 text=#f2f3f2
+EVT probe alive: yes; watches at end: 3; reloads: 5

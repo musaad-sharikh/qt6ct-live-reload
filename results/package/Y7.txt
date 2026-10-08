@@ -1,0 +1,49 @@
+##### Y7  probe=kp  case=stress  build=patched
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT watches at start: 3; plugin: <scratch>/…
+EVT #1 inplace light
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT    watches: 3
+EVT #2 rename dark
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT    watches: 3
+EVT #3 recreate light
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT    watches: 3
+EVT #4 inplace dark
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT    watches: 3
+EVT #5 recreate light
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT    watches: 3
+EVT #6 rename dark
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT    watches: 3
+EVT #7 rename light
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT    watches: 3
+EVT #8 inplace dark
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT    watches: 3
+EVT #9 recreate light
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT    watches: 3
+EVT #10 recreate dark
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT    watches: 3
+EVT #11 inplace light
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT    watches: 3
+EVT #12 rename dark
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT    watches: 3
+EVT probe alive: yes; watches at end: 3; reloads: 12

@@ -1,0 +1,12 @@
+##### U3  probe=qml  case=nativefull  build=patched
+PAL window=#efefef base=#ffffff text=#000000
+EVT watches at start: 1; plugin: plug-upbase/platformthemes/libqt6ct.so
+PAL window=#243022 base=#1b2419 text=#f2f3f2
+EVT reloads after repoint: 1; watches: 1
+EVT light: in place
+EVT dark: replaced by rename
+EVT light: deleted and recreated
+EVT 40 unrelated files in the same directory (must NOT reload)
+EVT reloads so far: 1; watches: 1
+EVT dark: 10 writes within a second
+EVT probe alive: yes; watches at end: 1; reloads: 1

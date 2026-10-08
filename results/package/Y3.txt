@@ -1,0 +1,12 @@
+##### Y3  probe=kpk  case=repoint  build=patched
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT watches at start: 3; plugin: <scratch>/…
+EVT qt6ct.conf repointed at other.colors (dark)
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT    watches: 3
+EVT old file rewritten to light (must NOT apply)
+EVT other.colors rewritten to light (must apply)
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT    watches: 3
+EVT probe alive: yes; watches at end: 3; reloads: 2

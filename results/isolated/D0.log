@@ -1,0 +1,16 @@
+This plugin does not support propagateSizeHints()
+kf.kio.widgets: QApplication::clipboard()->mimeData() is 0!
+kf.kio.widgets: QApplication::clipboard()->mimeData() is 0!
+This plugin does not support propagateSizeHints()
+org.kde.dolphin: Unknown class  ""  in session saved data!
+This plugin does not support propagateSizeHints()
+kf.kio.widgets: QApplication::clipboard()->mimeData() is 0!
+PAL shot-0 window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2
+kf.iconthemes: Icon theme "Noctalia-Folders" not found.
+EVT dolphin dolphin 26.08.1 pid alive: yes; theme plugin: /usr/lib/qt6/plugins/platformthemes/libqt6ct.so
+EVT switch -> light
+EVT switch -> dark
+EVT switch -> regen
+EVT switch -> dark
+EVT switch -> light
+EVT alive at end: yes

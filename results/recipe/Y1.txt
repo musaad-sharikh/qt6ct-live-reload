@@ -1,0 +1,13 @@
+##### Y1  probe=kpk  case=delete  build=patched
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT watches at start: 3; plugin: <scratch>/…
+EVT file deleted (stays away 5 s)
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#ffffff view.fg=#232629 sel.bg=#3daee9
+PAL window=#eff0f1 base=#ffffff highlight=#3daee9 | view.bg=#ffffff view.fg=#232629 sel.bg=#3daee9
+EVT light: file recreated
+PAL window=#eff0f1 base=#ffffff highlight=#3daee9 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#e3eae1 view.fg=#191b18 sel.bg=#81e467
+EVT dark: overwritten in place
+PAL window=#d6e0d3 base=#e3eae1 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+PAL window=#243022 base=#1b2419 highlight=#81e467 | view.bg=#1b2419 view.fg=#f2f3f2 sel.bg=#81e467
+EVT probe alive: yes; watches at end: 3; reloads: 3

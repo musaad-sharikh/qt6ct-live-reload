@@ -1,0 +1,14 @@
+21:45:24.5 PAL qpal.window=#1b2a37 qpal.base=#141f29 qpal.highlight=#67a9e4 | kcs.view.bg=#141f29 kcs.view.fg=#f2f2f3 kcs.sel.bg=#67a9e4 | style=breeze path=noctalia.colors
+21:45:27.2 MAP <scratch>/pkgx/new/usr/lib/libqt6ct-common.so.0.11 <scratch>/pkgx/new/usr/lib/qt6/plugins/platformthemes/libqt6ct.so <scratch>/pkgx/new/usr/lib/qt6/plugins/styles/libqt6ct-style.so 
+21:45:27.2 EVT switch -> light (render + notifyChangeno + qt6ct.conf re-saved)
+21:45:30.2 PAL qpal.window=#1b2a37 qpal.base=#141f29 qpal.highlight=#67a9e4 | kcs.view.bg=#dde6ee kcs.view.fg=#181a1b kcs.sel.bg=#13426c | style=breeze path=noctalia.colors
+21:45:30.5 PAL qpal.window=#b4c8da qpal.base=#dde6ee qpal.highlight=#13426c | kcs.view.bg=#dde6ee kcs.view.fg=#181a1b kcs.sel.bg=#13426c | style=breeze path=noctalia.colors
+21:45:33.3 EVT switch -> dark (render + notifyChangeno + qt6ct.conf re-saved)
+21:45:36.2 PAL qpal.window=#b4c8da qpal.base=#dde6ee qpal.highlight=#13426c | kcs.view.bg=#141f29 kcs.view.fg=#f2f2f3 kcs.sel.bg=#67a9e4 | style=breeze path=noctalia.colors
+21:45:36.5 PAL qpal.window=#1b2a37 qpal.base=#141f29 qpal.highlight=#67a9e4 | kcs.view.bg=#141f29 kcs.view.fg=#f2f2f3 kcs.sel.bg=#67a9e4 | style=breeze path=noctalia.colors
+21:45:39.3 EVT switch -> regen (render + notifyChangeno + qt6ct.conf re-saved)
+21:45:42.5 PAL qpal.window=#243022 qpal.base=#102030 qpal.highlight=#81e467 | kcs.view.bg=#102030 kcs.view.fg=#f2f3f2 kcs.sel.bg=#81e467 | style=breeze path=noctalia.colors
+21:45:45.4 EVT switch -> dark (render + notifyChangeno + qt6ct.conf re-saved)
+21:45:48.5 PAL qpal.window=#1b2a37 qpal.base=#141f29 qpal.highlight=#67a9e4 | kcs.view.bg=#141f29 kcs.view.fg=#f2f2f3 kcs.sel.bg=#67a9e4 | style=breeze path=noctalia.colors
+21:45:51.4 EVT switch -> light (render + notifyChangeno + qt6ct.conf re-saved)
+21:45:54.7 PAL qpal.window=#b4c8da qpal.base=#dde6ee qpal.highlight=#13426c | kcs.view.bg=#dde6ee kcs.view.fg=#181a1b kcs.sel.bg=#13426c | style=breeze path=noctalia.colors

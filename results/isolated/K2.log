@@ -1,0 +1,4 @@
+18:34:47.7 PAL qpal.window=#243022 qpal.base=#1b2419 qpal.highlight=#81e467 | kcs.view.bg=#1b2419 kcs.view.fg=#f2f3f2 kcs.sel.bg=#81e467 | style=breeze path=noctalia.colors
+18:34:50.4 EVT switch -> light (render + notifyChangepoke + qt6ct.conf re-saved)
+18:34:57.5 EVT switch -> dark (render + notifyChangepoke + qt6ct.conf re-saved)
+18:35:04.5 EVT switch -> light (render + notifyChangepoke + qt6ct.conf re-saved)
